@@ -1,4 +1,4 @@
-.modal-overlay {
+/* .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -99,4 +99,177 @@
 
 .checkbox-label input[type="checkbox"] {
   margin-right: 8px;
+} */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: white;
+  position: relative;
+  flex-direction: row;
+}
+
+.modal-left {
+  width: 40%;
+  background-color: #002348;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-left h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.modal-left p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-image img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.modal-right {
+  width: 60%;
+  background-color: white;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-close-button {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.modal-form input,
+.modal-form select,
+.modal-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.modal-submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff7b00;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.modal-submit-button:hover {
+  background-color: #e96b00;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-left {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .modal-right {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .modal-left h2 {
+    font-size: 22px;
+  }
+
+  .modal-left p {
+    font-size: 13px;
+  }
+
+  .modal-image img {
+    width: 80%;
+    margin: 20px auto 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-close-button {
+    font-size: 24px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .modal-left h2 {
+    font-size: 20px;
+  }
+
+  .modal-left p {
+    font-size: 12px;
+  }
+
+  .modal-form input,
+  .modal-form select,
+  .modal-form textarea {
+    font-size: 14px;
+  }
+
+  .modal-submit-button {
+    padding: 10px;
+    font-size: 14px;
+  }
 }
